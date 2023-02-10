@@ -4,11 +4,17 @@ from AppCoder.models import Curso, Estudiantes, Profesor, Entregable
 # Create your views here.
 
 
-def curso(self):
-    curso = Curso(nombre="Desarrollo web", comision=19881) 
-    curso.save()
-    documentoDeTexto =f"--> Curso: {curso.nombre} comision:{curso.comision}"
-    return HttpResponse(documentoDeTexto)
+def inicio(request):
+   return HttpResponse("Vista inicio")
 
-def estudiante(self):
-    estudiante = Estudiantes 
+def curso(request):
+   return HttpResponse("Vista cursos")
+
+def profesores(request):
+   return HttpResponse("Vista prefesores")
+
+def entregables(request):
+   return HttpResponse("Vista entregables")  
+
+def estudiantes(request):
+   return HttpResponse("Vista estudiantes")   
